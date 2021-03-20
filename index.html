@@ -8,12 +8,20 @@
 </head>
 
 <body>
-    <main class="container-lg">
-        <div class="mb-3">
-            <label for="pass" class="form-label">Hasło</label>
-            <input type="password" class="form-control" id="pass" placeholder="Hasło">
-        </div>
-    </main>
+    <div>
+        <p>Hasło</p>
+        <input type="password" id="pass1" onkeyup="checkPass();">
+        <span id="tooShort"></span>
+        <span id="minimumOneLowercase"></span>
+        <span id="minimumOneUppercase"></span>
+        <span id="minimumOneSpecialcase"></span>
+    </div>
+    <div>
+        <p>Powtórz hasło</p>
+        <input type="password" id="pass2" onkeyup="checkPass();">
+        <span id="differentPass"></span>
+    </div>
+    <script src="checkPass.js"></script>
 </body>
 
 </html>
